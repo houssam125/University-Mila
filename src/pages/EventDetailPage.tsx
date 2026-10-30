@@ -142,7 +142,7 @@ export default function EventDetailPage() {
             <h2 className="font-serif text-3xl font-semibold text-neutral-900">
               {t('events.moreEvents')}
             </h2>
-            <ul className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {related.data.map((other) => (
                 <li key={other.slug}>
                   <EventCard event={other} />

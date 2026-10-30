@@ -60,7 +60,7 @@ export default function EventCard({ event }: { event: EventSummary }) {
         <div className="mt-6 flex items-center justify-between gap-4 border-t border-neutral-200 pt-4 text-sm">
           <span className="flex min-w-0 items-center gap-1.5 text-neutral-500">
             <MapPin className="h-4 w-4 shrink-0" />
-            <span className="truncate">{event.location.name}</span>
+            <span className="min-w-0 truncate">{event.location.name}</span>
           </span>
           <span className="flex shrink-0 items-center gap-2 font-semibold text-neutral-900">
             {t('events.readMore')}

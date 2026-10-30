@@ -32,7 +32,7 @@ export default function EventsSection() {
 
         {isError && <LoadError onRetry={() => refetch()} className="mt-12" />}
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {isPending &&
             Array.from({ length: TOP_EVENTS_LIMIT }, (_, index) => (
               <li key={index}>

@@ -92,7 +92,7 @@ export default function EventsPage() {
 
           <ul
             className={clsx(
-              'mt-10 grid gap-6 transition-opacity md:grid-cols-2 xl:grid-cols-3',
+              'mt-10 grid grid-cols-1 gap-6 transition-opacity md:grid-cols-2 xl:grid-cols-3',
               events.isPlaceholderData && 'opacity-60',
             )}
           >

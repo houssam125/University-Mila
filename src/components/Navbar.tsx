@@ -151,7 +151,8 @@ export default function Navbar() {
                 className="flex items-center gap-2 text-base transition hover:text-accent"
               >
                 <Menu className="h-[18px] w-[18px]" strokeWidth={2.25} />
-                <span>{t('header.menu')}</span>
+                {/* On very narrow phones only the icon shows, so the bar fits */}
+                <span className="max-[359px]:sr-only">{t('header.menu')}</span>
               </button>
             </div>
           </div>

@@ -153,7 +153,7 @@ export default function PersonPage() {
           </div>
 
           {events.isError && <LoadError onRetry={() => events.refetch()} className="mt-8" />}
-          <ul className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {events.isPending &&
               Array.from({ length: 3 }, (_, index) => (
                 <li key={index}>
