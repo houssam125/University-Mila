@@ -238,5 +238,13 @@
     "closing": "His name is a promise to every student of this university: that knowledge, organisation and dedication can change the course of a nation.",
     "menuEyebrow": "The man behind our name",
     "readStory": "Read his story"
+  },
+  "errors": {
+    "newVersionTitle": "A new version is available",
+    "newVersionText": "The website was updated while this page was open. Reload to get the latest version.",
+    "title": "Something went wrong",
+    "text": "This page could not be displayed. Please try reloading, or go back to the home page.",
+    "reload": "Reload the page",
+    "home": "Back to home"
   }
 }

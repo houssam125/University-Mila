@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from '@/layouts/MainLayout'
 import Home from '@/pages/Home'
 import NotFound from '@/pages/NotFound'
+import RouteError from '@/pages/RouteError'
 
 // The home page ships with the first download; other pages load when they are first opened
 const page = (load: () => Promise<{ default: React.ComponentType }>) => async () => ({
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
+    errorElement: <RouteError />,
     children: [
       { index: true, element: <Home /> },
       { path: 'about', lazy: page(() => import('@/pages/About')) },

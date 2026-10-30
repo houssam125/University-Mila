@@ -238,5 +238,13 @@
     "closing": "Son nom est une promesse faite à chaque étudiant de cette université : le savoir, l'organisation et l'engagement peuvent changer le cours d'une nation.",
     "menuEyebrow": "L’homme derrière notre nom",
     "readStory": "Découvrir son histoire"
+  },
+  "errors": {
+    "newVersionTitle": "Une nouvelle version est disponible",
+    "newVersionText": "Le site a été mis à jour pendant que cette page était ouverte. Rechargez-la pour obtenir la dernière version.",
+    "title": "Un problème est survenu",
+    "text": "Cette page n'a pas pu s'afficher. Essayez de la recharger ou revenez à l'accueil.",
+    "reload": "Recharger la page",
+    "home": "Retour à l'accueil"
   }
 }
