@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "title": "Mila University | Faculties, Programs & Research in Mila, Algeria",
+    "description": "Mila University in Algeria: explore our faculties, degree programs in science, technology and economics, research laboratories, campus life and upcoming events."
+  },
+  "brand": {
+    "name": "MILA",
+    "subtitle": "UNIVERSITY",
+    "home": "Mila University home",
+    "logoAlt": "Mila University logo",
+    "university": "Mila University"
+  },
+  "header": {
+    "search": "Search",
+    "searchPlaceholder": "Search...",
+    "searchLabel": "Search the website",
+    "closeSearch": "Close search",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language",
+    "mainMenu": "Main menu"
+  },
+  "menu": {
+    "navigate": "Navigate",
+    "selectCategory": "Select a category →",
+    "selectSubcategory": "Select a sub-category →"
+  },
+  "nav": {
+    "university": "University",
+    "programs": "Degree Programs",
+    "programsSection": "Programs",
+    "faculties": "Faculties",
+    "overview": "Overview",
+    "about": "About the University",
+    "history": "History",
+    "mission": "Mission & Vision",
+    "rectorate": "Rectorate",
+    "rectorAddress": "Rector's Address",
+    "viceRector": "Vice Rector — Higher Education",
+    "secretariat": "General Secretariat",
+    "centers": "Centers & Cells",
+    "computingCenter": "Computing & Networks Center",
+    "qualityCell": "Quality Assurance Cell",
+    "mathCs": "Math & Computer Science",
+    "technicalSciences": "Technical Sciences",
+    "economics": "Economics & Management",
+    "facultyMathCs": "Faculty of Math & CS",
+    "facultyTech": "Faculty of Tech Sciences",
+    "labs": "Research Laboratories",
+    "teachers": "University Teachers",
+    "clubs": "Clubs & Activities",
+    "housing": "Housing & Dining",
+    "events": "Events",
+    "boussouf": "Abdelhafid Boussouf"
+  },
+  "hero": {
+    "titleLine1": "Abdelhafid Boussouf",
+    "titleLine2": "University Mila",
+    "description": "Abdelhafid Boussouf University – Mila is a public scientific and cultural institution providing qualitative scientific training to students in various fields, established by Executive Decree No. 08-204 of July 9, 2008.",
+    "scrollNext": "Scroll to the next section"
+  },
+  "figures": {
+    "heading": "Mila University in numbers",
+    "teachers": "Teachers",
+    "students": "Students",
+    "studentsSince2008": "Students since 2008",
+    "programs": "Training Programs",
+    "publications": "Scientific Publications"
+  },
+  "rector": {
+    "role": "University Rector",
+    "name": "Prof. Amirouche Bouchelaghem",
+    "photoAlt": "Prof. Amirouche Bouchelaghem, University Rector",
+    "summary": "Born in 1964, a university professor specialising in Economics and Health Economics, dedicated to building qualitative scientific environments for researchers and students across Algeria.",
+    "readAddress": "Read the Rector's Address",
+    "academicPath": "Academic Path",
+    "degrees": [
+      {
+        "year": "1992",
+        "title": "Bachelor's — Financial Sciences",
+        "institution": "University of Mentouri, Constantine"
+      },
+      {
+        "year": "1998",
+        "title": "Master's — Business Management",
+        "institution": "University of Mentouri, Constantine"
+      },
+      {
+        "year": "2015",
+        "title": "PhD — Financial Sciences",
+        "institution": "Abdelhamid Mehri University, Constantine 2"
+      },
+      {
+        "year": "2016",
+        "title": "HDR — Economics",
+        "institution": "Abdelhamid Mehri University, Constantine 2"
+      }
+    ]
+  },
+  "platforms": {
+    "label": "Online services",
+    "title": "Educational Platforms",
+    "intro": "Everything you need for your studies, online: request documents, follow your courses and check your timetable from anywhere.",
+    "documents": {
+      "tag": "Student services",
+      "title": "Document Request",
+      "description": "Request official documents online, including enrolment certificates, transcripts and diplomas, and track each request until it is ready for collection.",
+      "cta": "Request a document"
+    },
+    "elearning": {
+      "tag": "Online courses",
+      "title": "E-learning",
+      "description": "Reach your courses, lecture notes, videos and assignments on the university's online learning platform, anytime and from any device.",
+      "cta": "Start learning"
+    },
+    "timetables": {
+      "tag": "Planning",
+      "title": "Timetables",
+      "description": "Find up-to-date timetables for every faculty, department and specialty in one place, covering lectures, tutorials and exam sessions.",
+      "cta": "View timetables"
+    }
+  },
+  "faculties": {
+    "label": "Faculties & Institutes",
+    "title": "Faculties and Institutes",
+    "intro": "Seven faculties and institutes offering bachelor, master and doctoral programs across sciences, technology, languages, law and economics.",
+    "explore": "Explore",
+    "items": {
+      "economics": {
+        "title": "Economics, Management and Business Sciences",
+        "description": "Economic analysis, management, commerce and finance, preparing students for careers in business, banking, entrepreneurship and public administration."
+      },
+      "foreignLanguages": {
+        "title": "Letters and Foreign Languages",
+        "description": "Foreign languages, literature and translation, opening doors to teaching, translation and international communication."
+      },
+      "arabic": {
+        "title": "Arabic Language and Literature",
+        "description": "Arabic language, literature and linguistics, cultivating heritage and critical thinking for careers in teaching, research and media."
+      },
+      "natureLife": {
+        "title": "Natural and Life Sciences",
+        "description": "Biology, ecology and environmental sciences, with laboratory and field training on the living world and its resources."
+      },
+      "technical": {
+        "title": "Technical Sciences",
+        "description": "Engineering and technology programs that combine solid theoretical foundations with hands-on practical work."
+      },
+      "mathCs": {
+        "title": "Mathematics and Computer Science",
+        "description": "From algorithms and software engineering to networks and data, preparing graduates for a fast-moving digital world."
+      },
+      "law": {
+        "title": "Law and Political Sciences",
+        "description": "Public and private law, institutions and international relations, for careers in justice, administration and diplomacy."
+      }
+    }
+  },
+  "events": {
+    "label": "Campus life",
+    "title": "Top Events",
+    "intro": "Conferences, ceremonies, workshops and student activities that bring our university to life.",
+    "viewAll": "View all events",
+    "readMore": "Read more",
+    "pageTitle": "All Events",
+    "pageIntro": "Every conference, ceremony, workshop and student activity at Mila University, from the most recent.",
+    "all": "All",
+    "empty": "No events in this category yet.",
+    "back": "Back to all events",
+    "date": "Date",
+    "location": "Location",
+    "category": "Category",
+    "moreEvents": "More events",
+    "notFound": "This event could not be found.",
+    "categories": {
+      "conference": "Conference",
+      "ceremony": "Ceremony",
+      "workshop": "Workshop",
+      "studentLife": "Student life",
+      "research": "Research"
+    },
+    "pagination": "Pages",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "gallery": "Photo gallery",
+    "openPhoto": "Open photo",
+    "previousPhoto": "Previous photo",
+    "nextPhoto": "Next photo",
+    "people": "Teachers and staff involved",
+    "teacher": "Teacher",
+    "staff": "Staff",
+    "organizedBy": "Organized by",
+    "viewOnMap": "View on map",
+    "eventLink": "Event link",
+    "updated": "Last updated {{date}}",
+    "openLink": "Open link",
+    "filters": {
+      "type": "Type",
+      "search": "Search events, places, topics…",
+      "organizer": "Department",
+      "allOrganizers": "Whole university",
+      "universityGroup": "University services",
+      "facultiesGroup": "Faculties and institutes",
+      "year": "Year",
+      "allYears": "All years",
+      "month": "Month",
+      "allMonths": "All months",
+      "pickYearFirst": "Choose a year first",
+      "clear": "Clear filters"
+    },
+    "count_one": "{{count}} event",
+    "count_other": "{{count}} events",
+    "photoCount_one": "{{count}} photo — click to enlarge",
+    "photoCount_other": "{{count}} photos — click to enlarge"
+  },
+  "common": {
+    "loadError": "This content could not be loaded. Please check your connection.",
+    "retry": "Try again"
+  },
+  "people": {
+    "back": "Back",
+    "about": "About",
+    "expertise": "Areas of expertise",
+    "contact": "Contact",
+    "sendEmail": "Send an email",
+    "events": "Events and activities",
+    "noEvents": "No events yet."
+  },
+  "boussouf": {
+    "label": "Our namesake",
+    "contents": "Contents",
+    "timeline": "Timeline",
+    "photos": "Photos",
+    "photoCredits": "Photo credits",
+    "photoLicense": "Archive photos and documents are in the public domain; the photo of old Mila is shared under CC BY-SA 4.0. All come from Wikimedia Commons: select one to see the original file.",
+    "sources": "Sources",
+    "sourcesNote": "Facts from the encyclopaedia articles above and the works they cite, including Le Monde (3 January 1981) and Mohammed Harbi, “Le Drame algérien” (1995).",
+    "closing": "His name is a promise to every student of this university: that knowledge, organisation and dedication can change the course of a nation.",
+    "menuEyebrow": "The man behind our name",
+    "readStory": "Read his story"
+  }
+}

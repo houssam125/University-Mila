@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "title": "Université de Mila | Facultés, formations et recherche à Mila, Algérie",
+    "description": "Université de Mila, Algérie : découvrez nos facultés, nos formations en sciences, technologie et économie, nos laboratoires de recherche, la vie sur le campus et les événements à venir."
+  },
+  "brand": {
+    "name": "MILA",
+    "subtitle": "UNIVERSITÉ",
+    "home": "Accueil de l'Université de Mila",
+    "logoAlt": "Logo de l'Université de Mila",
+    "university": "Université de Mila"
+  },
+  "header": {
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher...",
+    "searchLabel": "Rechercher sur le site",
+    "closeSearch": "Fermer la recherche",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue",
+    "mainMenu": "Menu principal"
+  },
+  "menu": {
+    "navigate": "Naviguer",
+    "selectCategory": "Choisissez une catégorie →",
+    "selectSubcategory": "Choisissez une sous-catégorie →"
+  },
+  "nav": {
+    "university": "Université",
+    "programs": "Formations",
+    "programsSection": "Formations",
+    "faculties": "Facultés",
+    "overview": "Présentation",
+    "about": "À propos de l'université",
+    "history": "Histoire",
+    "mission": "Mission et vision",
+    "rectorate": "Rectorat",
+    "rectorAddress": "Mot du recteur",
+    "viceRector": "Vice-recteur — Enseignement supérieur",
+    "secretariat": "Secrétariat général",
+    "centers": "Centres et cellules",
+    "computingCenter": "Centre de calcul et des réseaux",
+    "qualityCell": "Cellule d'assurance qualité",
+    "mathCs": "Mathématiques et informatique",
+    "technicalSciences": "Sciences techniques",
+    "economics": "Sciences économiques et gestion",
+    "facultyMathCs": "Faculté de mathématiques et informatique",
+    "facultyTech": "Faculté des sciences techniques",
+    "labs": "Laboratoires de recherche",
+    "teachers": "Enseignants",
+    "clubs": "Clubs et activités",
+    "housing": "Hébergement et restauration",
+    "events": "Événements",
+    "boussouf": "Abdelhafid Boussouf"
+  },
+  "hero": {
+    "titleLine1": "Université Abdelhafid",
+    "titleLine2": "Boussouf – Mila",
+    "description": "L'Université Abdelhafid Boussouf – Mila est un établissement public à caractère scientifique et culturel qui assure une formation scientifique de qualité aux étudiants dans divers domaines. Elle a été créée par le décret exécutif n° 08-204 du 9 juillet 2008.",
+    "scrollNext": "Aller à la section suivante"
+  },
+  "figures": {
+    "heading": "L'Université de Mila en chiffres",
+    "teachers": "Enseignants",
+    "students": "Étudiants",
+    "studentsSince2008": "Étudiants depuis 2008",
+    "programs": "Offres de formation",
+    "publications": "Publications scientifiques"
+  },
+  "rector": {
+    "role": "Recteur de l'université",
+    "name": "Pr Amirouche Bouchelaghem",
+    "photoAlt": "Pr Amirouche Bouchelaghem, recteur de l'université",
+    "summary": "Né en 1964, professeur des universités spécialisé en économie et en économie de la santé, il œuvre à bâtir des environnements scientifiques de qualité pour les chercheurs et les étudiants à travers l'Algérie.",
+    "readAddress": "Lire le mot du recteur",
+    "academicPath": "Parcours académique",
+    "degrees": [
+      {
+        "year": "1992",
+        "title": "Licence — Sciences financières",
+        "institution": "Université Mentouri, Constantine"
+      },
+      {
+        "year": "1998",
+        "title": "Master — Gestion des entreprises",
+        "institution": "Université Mentouri, Constantine"
+      },
+      {
+        "year": "2015",
+        "title": "Doctorat — Sciences financières",
+        "institution": "Université Abdelhamid Mehri, Constantine 2"
+      },
+      {
+        "year": "2016",
+        "title": "HDR — Sciences économiques",
+        "institution": "Université Abdelhamid Mehri, Constantine 2"
+      }
+    ]
+  },
+  "platforms": {
+    "label": "Services en ligne",
+    "title": "Plateformes pédagogiques",
+    "intro": "Tout ce qu'il vous faut pour vos études, en ligne : demandez vos documents, suivez vos cours et consultez votre emploi du temps où que vous soyez.",
+    "documents": {
+      "tag": "Services aux étudiants",
+      "title": "Demande de documents",
+      "description": "Demandez en ligne vos documents officiels, comme les certificats de scolarité, les relevés de notes et les diplômes, et suivez chaque demande jusqu'à ce qu'elle soit prête à être retirée.",
+      "cta": "Demander un document"
+    },
+    "elearning": {
+      "tag": "Cours en ligne",
+      "title": "E-learning",
+      "description": "Accédez à vos cours, supports, vidéos et devoirs sur la plateforme d'enseignement en ligne de l'université, à tout moment et depuis n'importe quel appareil.",
+      "cta": "Commencer à apprendre"
+    },
+    "timetables": {
+      "tag": "Planning",
+      "title": "Emplois du temps",
+      "description": "Retrouvez au même endroit les emplois du temps à jour de chaque faculté, département et spécialité : cours, travaux dirigés et examens.",
+      "cta": "Voir les emplois du temps"
+    }
+  },
+  "faculties": {
+    "label": "Facultés et instituts",
+    "title": "Facultés et instituts",
+    "intro": "Sept facultés et instituts proposant des formations en licence, master et doctorat en sciences, technologie, langues, droit et économie.",
+    "explore": "Découvrir",
+    "items": {
+      "economics": {
+        "title": "Sciences économiques, commerciales et de gestion",
+        "description": "Analyse économique, gestion, commerce et finance, pour préparer les étudiants aux métiers de l'entreprise, de la banque, de l'entrepreneuriat et de l'administration publique."
+      },
+      "foreignLanguages": {
+        "title": "Lettres et langues étrangères",
+        "description": "Langues étrangères, littérature et traduction, ouvrant les portes de l'enseignement, de la traduction et de la communication internationale."
+      },
+      "arabic": {
+        "title": "Langue et littérature arabes",
+        "description": "Langue, littérature et linguistique arabes, pour cultiver le patrimoine et l'esprit critique au service de l'enseignement, de la recherche et des médias."
+      },
+      "natureLife": {
+        "title": "Sciences de la nature et de la vie",
+        "description": "Biologie, écologie et sciences de l’environnement, avec une formation en laboratoire et sur le terrain consacrée au vivant et à ses ressources."
+      },
+      "technical": {
+        "title": "Sciences techniques",
+        "description": "Des formations en ingénierie et technologie qui associent de solides bases théoriques à une pratique de terrain."
+      },
+      "mathCs": {
+        "title": "Mathématiques et informatique",
+        "description": "Des algorithmes et du génie logiciel aux réseaux et aux données, pour préparer les diplômés à un monde numérique en pleine évolution."
+      },
+      "law": {
+        "title": "Droit et sciences politiques",
+        "description": "Droit public et privé, institutions et relations internationales, pour des carrières dans la justice, l'administration et la diplomatie."
+      }
+    }
+  },
+  "events": {
+    "label": "Vie universitaire",
+    "title": "Événements phares",
+    "intro": "Colloques, cérémonies, ateliers et activités étudiantes qui font vivre notre université.",
+    "viewAll": "Voir tous les événements",
+    "readMore": "Lire la suite",
+    "pageTitle": "Tous les événements",
+    "pageIntro": "Tous les colloques, cérémonies, ateliers et activités étudiantes de l'Université de Mila, du plus récent au plus ancien.",
+    "all": "Tous",
+    "empty": "Aucun événement dans cette catégorie pour l'instant.",
+    "back": "Retour à tous les événements",
+    "date": "Date",
+    "location": "Lieu",
+    "category": "Catégorie",
+    "moreEvents": "Autres événements",
+    "notFound": "Cet événement est introuvable.",
+    "categories": {
+      "conference": "Colloque",
+      "ceremony": "Cérémonie",
+      "workshop": "Atelier",
+      "studentLife": "Vie étudiante",
+      "research": "Recherche"
+    },
+    "pagination": "Pages",
+    "previousPage": "Page précédente",
+    "nextPage": "Page suivante",
+    "gallery": "Galerie photos",
+    "openPhoto": "Ouvrir la photo",
+    "previousPhoto": "Photo précédente",
+    "nextPhoto": "Photo suivante",
+    "people": "Enseignants et personnel impliqués",
+    "teacher": "Enseignant",
+    "staff": "Personnel",
+    "organizedBy": "Organisé par",
+    "viewOnMap": "Voir sur la carte",
+    "eventLink": "Lien de l'événement",
+    "updated": "Mis à jour le {{date}}",
+    "openLink": "Ouvrir le lien",
+    "filters": {
+      "type": "Type",
+      "search": "Rechercher un événement, un lieu, un thème…",
+      "organizer": "Département",
+      "allOrganizers": "Toute l’université",
+      "universityGroup": "Services de l'université",
+      "facultiesGroup": "Facultés et instituts",
+      "year": "Année",
+      "allYears": "Toutes les années",
+      "month": "Mois",
+      "allMonths": "Tous les mois",
+      "pickYearFirst": "Choisissez d'abord une année",
+      "clear": "Effacer les filtres"
+    },
+    "count_one": "{{count}} événement",
+    "count_other": "{{count}} événements",
+    "photoCount_one": "{{count}} photo — cliquez pour agrandir",
+    "photoCount_other": "{{count}} photos — cliquez pour agrandir"
+  },
+  "common": {
+    "loadError": "Ce contenu n'a pas pu être chargé. Vérifiez votre connexion.",
+    "retry": "Réessayer"
+  },
+  "people": {
+    "back": "Retour",
+    "about": "Présentation",
+    "expertise": "Domaines d'expertise",
+    "contact": "Contact",
+    "sendEmail": "Envoyer un e-mail",
+    "events": "Événements et activités",
+    "noEvents": "Aucun événement pour l'instant."
+  },
+  "boussouf": {
+    "label": "Notre parrain",
+    "contents": "Sommaire",
+    "timeline": "Chronologie",
+    "photos": "Photos",
+    "photoCredits": "Crédits photos",
+    "photoLicense": "Les photos et documents d'archives sont dans le domaine public ; la photo du vieux Mila est partagée sous licence CC BY-SA 4.0. Toutes proviennent de Wikimedia Commons : sélectionnez-en une pour voir le fichier d'origine.",
+    "sources": "Sources",
+    "sourcesNote": "Faits issus des articles encyclopédiques ci-dessus et des ouvrages qu’ils citent, dont Le Monde (3 janvier 1981) et Mohammed Harbi, « Le Drame algérien » (1995).",
+    "closing": "Son nom est une promesse faite à chaque étudiant de cette université : le savoir, l'organisation et l'engagement peuvent changer le cours d'une nation.",
+    "menuEyebrow": "L’homme derrière notre nom",
+    "readStory": "Découvrir son histoire"
+  }
+}
