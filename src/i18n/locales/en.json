@@ -455,7 +455,8 @@
         "name": "Laboratory for Studies on Economic Diversification Strategies for Sustainable Development",
         "topics": ["SMEs", "Service economy", "Industrial investment", "Food security"]
       }
-    }
+    },
+    "faculty": "Faculty"
   },
   "scholarships": {
     "title": "Scholarships",
@@ -613,7 +614,6 @@
     "statClubs": "Clubs",
     "statMembers": "Members",
     "statFields": "Fields",
-    "sampleNotice": "Sample content: these clubs, photos and achievements are placeholders to preview the page. The real clubs will be added soon.",
     "all": "All clubs",
     "bestAchievement": "Best achievement",
     "members_one": "{{count}} member",
@@ -827,8 +827,6 @@
     "title": "Housing & Dining",
     "eyebrow": "Student life",
     "intro": "Where students live and eat: the university residences for women and men, and the university restaurant.",
-    "samplePartial": "Name, capacity and Facebook page are real. The description, photos and events are sample content until the real details are added.",
-    "sampleFull": "Sample content: the name, details, photos and events are placeholders until the real details are added.",
     "kinds": {
       "residence": "Residence",
       "restaurant": "Restaurant"
@@ -931,7 +929,6 @@
     "title": "University Teachers",
     "eyebrow": "Teaching staff",
     "intro": "Meet the teachers and researchers of each faculty: their degrees, experience, research papers and projects.",
-    "sampleNotice": "Sample content: apart from the rector's degrees, these teacher profiles are placeholders until the real profiles are added.",
     "searchLabel": "Search teachers",
     "searchPlaceholder": "Search by name, subject or expertise…",
     "allFaculties": "All faculties",
@@ -940,6 +937,7 @@
     "clear": "Clear filters",
     "emptyTitle": "No teachers found",
     "emptyText": "Try another name, or choose another faculty.",
-    "viewProfile": "View profile"
+    "viewProfile": "View profile",
+    "faculty": "Faculty"
   }
 }

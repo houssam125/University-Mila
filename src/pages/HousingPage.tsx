@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, BedDouble, Check, Info, UtensilsCrossed } from 'lucide-react'
+import { ArrowRight, BedDouble, Check, UtensilsCrossed } from 'lucide-react'
 import clsx from 'clsx'
 import PageHeader from '@/components/PageHeader'
 import { housingPlaces, MEAL_PRICE_DZD, type HousingPlace } from '@/data/housing'
@@ -128,13 +128,6 @@ function PlaceRow({ place, reversed }: { place: HousingPlace; reversed: boolean 
         </ul>
 
         <div className="flex-1" />
-
-        {place.sample && (
-          <p className="mt-6 flex items-start gap-2 text-xs text-neutral-500">
-            <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#a87b2a]" />
-            {t(place.sample === 'partial' ? 'housing.samplePartial' : 'housing.sampleFull')}
-          </p>
-        )}
 
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-crimson">
           {t('housing.viewProfile')}

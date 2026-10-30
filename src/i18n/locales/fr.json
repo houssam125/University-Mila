@@ -474,7 +474,8 @@
           "Sécurité alimentaire"
         ]
       }
-    }
+    },
+    "faculty": "Faculté"
   },
   "scholarships": {
     "title": "Bourses d’études",
@@ -632,7 +633,6 @@
     "statClubs": "Clubs",
     "statMembers": "Membres",
     "statFields": "Domaines",
-    "sampleNotice": "Contenu d’exemple : ces clubs, photos et réussites servent à prévisualiser la page. Les vrais clubs seront ajoutés bientôt.",
     "all": "Tous les clubs",
     "bestAchievement": "Meilleure réussite",
     "members_one": "{{count}} membre",
@@ -846,8 +846,6 @@
     "title": "Hébergement et restauration",
     "eyebrow": "Vie étudiante",
     "intro": "Où les étudiants vivent et mangent : les résidences universitaires filles et garçons, et le restaurant universitaire.",
-    "samplePartial": "Le nom, la capacité et la page Facebook sont réels. La description, les photos et les événements sont des exemples en attendant les vraies informations.",
-    "sampleFull": "Contenu d’exemple : le nom, les détails, les photos et les événements seront remplacés par les vraies informations.",
     "kinds": {
       "residence": "Résidence",
       "restaurant": "Restaurant"
@@ -950,7 +948,6 @@
     "title": "Enseignants",
     "eyebrow": "Corps enseignant",
     "intro": "Découvrez les enseignants et chercheurs de chaque faculté : diplômes, expérience, publications et projets.",
-    "sampleNotice": "Contenu d'exemple : à part les diplômes du recteur, ces profils d'enseignants seront remplacés par les vrais profils.",
     "searchLabel": "Rechercher un enseignant",
     "searchPlaceholder": "Rechercher par nom, matière ou domaine…",
     "allFaculties": "Toutes les facultés",
@@ -959,6 +956,7 @@
     "clear": "Effacer les filtres",
     "emptyTitle": "Aucun enseignant trouvé",
     "emptyText": "Essayez un autre nom ou une autre faculté.",
-    "viewProfile": "Voir le profil"
+    "viewProfile": "Voir le profil",
+    "faculty": "Faculté"
   }
 }

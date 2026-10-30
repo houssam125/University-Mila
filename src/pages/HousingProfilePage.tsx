@@ -1,7 +1,7 @@
 import { useEffect, type ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock, Info } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock } from 'lucide-react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa6'
 import EventGallery from '@/components/events/EventGallery'
 import NotFound from '@/pages/NotFound'
@@ -96,13 +96,6 @@ export default function HousingProfilePage() {
 
       <div className="bg-stone px-4 py-14 sm:px-6 lg:py-20">
         <div className="mx-auto max-w-[1400px] space-y-16 lg:space-y-20">
-          {place.sample && (
-            <p className="flex items-start gap-3 border border-[#e8c27a] bg-[#e8c27a]/15 px-4 py-3 text-sm text-neutral-700">
-              <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#a87b2a]" />
-              {t(place.sample === 'partial' ? 'housing.samplePartial' : 'housing.sampleFull')}
-            </p>
-          )}
-
           {/* Description, services and meal times */}
           <section className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
             <div className="bg-[#f7f7f5] p-7 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:p-10">

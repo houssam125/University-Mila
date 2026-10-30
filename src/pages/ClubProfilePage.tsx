@@ -1,11 +1,11 @@
 import { useEffect, type ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowLeft, ArrowRight, CalendarDays, Info, Trophy } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CalendarDays, Trophy } from 'lucide-react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa6'
 import EventGallery from '@/components/events/EventGallery'
 import NotFound from '@/pages/NotFound'
-import { clubs, CLUBS_ARE_SAMPLES, type Club } from '@/data/clubs'
+import { clubs, type Club } from '@/data/clubs'
 
 export default function ClubProfilePage() {
   const { id = '' } = useParams()
@@ -84,13 +84,6 @@ export default function ClubProfilePage() {
 
       <div className="bg-stone px-4 py-14 sm:px-6 lg:py-20">
         <div className="mx-auto max-w-[1400px] space-y-16 lg:space-y-20">
-          {CLUBS_ARE_SAMPLES && (
-            <p className="flex items-start gap-3 border border-[#e8c27a] bg-[#e8c27a]/15 px-4 py-3 text-sm text-neutral-700">
-              <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#a87b2a]" />
-              {t('clubs.sampleNotice')}
-            </p>
-          )}
-
           {/* Mission, goals and best achievement */}
           <section className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
             <div className="bg-[#f7f7f5] p-7 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:p-10">

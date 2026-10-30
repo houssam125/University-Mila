@@ -25,9 +25,8 @@ export interface Club {
   instagram?: string
 }
 
-// TODO: SAMPLE CONTENT, shown only to preview the page layout.
-// Replace every club below with the real clubs, their photos, events and achievements.
-export const CLUBS_ARE_SAMPLES = true
+// TODO: SAMPLE CONTENT. Every club below is a placeholder (no notice is shown on the site):
+// replace them with the real clubs, their photos, events and achievements.
 
 export const unsplash = (id: string, width = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&q=80`

@@ -1,11 +1,12 @@
 import { useEffect, type ReactNode } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, Building2, Info, Search, X } from 'lucide-react'
+import { ArrowRight, Building2, Search, X } from 'lucide-react'
 import clsx from 'clsx'
 import { usePeople } from '@/api/events'
 import type { PersonListItem } from '@/api/types'
 import LoadError from '@/components/LoadError'
+import FilterSelect from '@/components/FilterSelect'
 import PageHeader from '@/components/PageHeader'
 
 // Professor writing formulas on a chalkboard (Unsplash, free licence)
@@ -74,11 +75,6 @@ export default function TeachersPage() {
 
       <section className="bg-stone px-4 py-12 sm:px-6 lg:py-20">
         <div className="mx-auto max-w-[1400px]">
-          <p className="mb-8 flex items-start gap-3 border border-[#e8c27a] bg-[#e8c27a]/15 px-4 py-3 text-sm text-neutral-700">
-            <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#a87b2a]" />
-            {t('teachers.sampleNotice')}
-          </p>
-
           {/* Search and faculty filter */}
           <div className="bg-[#f7f7f5] p-4 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:p-6">
             <label className="relative block">
@@ -92,7 +88,21 @@ export default function TeachersPage() {
                 className="h-12 w-full border border-neutral-300 bg-white ps-11 pe-4 text-sm text-neutral-900 transition outline-none placeholder:text-neutral-400 focus:border-neutral-900"
               />
             </label>
-            <div className="-mx-4 mt-4 flex gap-2 overflow-x-auto border-t border-neutral-200 px-4 pt-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+            {/* Phones: one dropdown; larger screens: a row of buttons */}
+            <FilterSelect
+              className="mt-4 sm:hidden"
+              label={t('teachers.faculty')}
+              value={faculty}
+              onChange={(value) => setFilter('faculty', value)}
+              options={[
+                { value: '', label: t('teachers.allFaculties') },
+                ...FACULTIES.map((item) => ({
+                  value: item.slug,
+                  label: t(`faculties.items.${item.id}.title`),
+                })),
+              ]}
+            />
+            <div className="mt-4 hidden flex-wrap gap-2 border-t border-neutral-200 pt-4 sm:flex">
               <FilterChip active={!faculty} onClick={() => setFilter('faculty', '')}>
                 {t('teachers.allFaculties')}
               </FilterChip>

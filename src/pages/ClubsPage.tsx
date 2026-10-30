@@ -1,11 +1,11 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, CalendarDays, Info, Trophy, Users } from 'lucide-react'
+import { ArrowRight, CalendarDays, Trophy, Users } from 'lucide-react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa6'
 import clsx from 'clsx'
 import PageHeader from '@/components/PageHeader'
-import { clubs, CLUBS_ARE_SAMPLES, type Club, type ClubField } from '@/data/clubs'
+import { clubs, type Club, type ClubField } from '@/data/clubs'
 
 const HEADER_IMAGE =
   'https://images.unsplash.com/photo-1550305080-4e029753abcf?auto=format&fit=crop&w=1920&q=80'
@@ -52,13 +52,6 @@ export default function ClubsPage() {
 
       <section className="bg-stone px-4 py-12 sm:px-6 lg:py-20">
         <div className="mx-auto max-w-[1400px]">
-          {CLUBS_ARE_SAMPLES && (
-            <p className="mb-8 flex items-start gap-3 border border-[#e8c27a] bg-[#e8c27a]/15 px-4 py-3 text-sm text-neutral-700">
-              <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#a87b2a]" />
-              {t('clubs.sampleNotice')}
-            </p>
-          )}
-
           {/* Field filter: one swipeable row on phones */}
           <div className="-mx-4 mb-10 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
             <FilterChip active={field === null} onClick={() => setField(null)}>

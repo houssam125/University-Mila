@@ -118,25 +118,41 @@ export default function Navbar() {
           <div className="flex items-stretch">
             <div className="flex items-center border-s border-white/15 px-4 sm:px-6">
               {isSearchOpen ? (
-                <form onSubmit={onSearchSubmit} className="flex items-center gap-3" role="search">
-                  <input
-                    autoFocus
-                    type="text"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    placeholder={t('header.searchPlaceholder')}
-                    aria-label={t('header.searchLabel')}
-                    className="w-32 border-b border-white/40 bg-transparent py-1 text-base text-white placeholder:text-white/60 focus:border-white focus:outline-none sm:w-72"
-                  />
+                <>
+                  {/* Larger screens: the field opens inside the bar */}
+                  <form
+                    onSubmit={onSearchSubmit}
+                    className="hidden items-center gap-3 sm:flex"
+                    role="search"
+                  >
+                    <input
+                      autoFocus
+                      type="text"
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      placeholder={t('header.searchPlaceholder')}
+                      aria-label={t('header.searchLabel')}
+                      className="w-72 border-b border-white/40 bg-transparent py-1 text-base text-white placeholder:text-white/60 focus:border-white focus:outline-none"
+                    />
+                    <button
+                      type="button"
+                      onClick={closeSearch}
+                      aria-label={t('header.closeSearch')}
+                      className="text-white/80 transition hover:text-white"
+                    >
+                      <X className="h-5 w-5" />
+                    </button>
+                  </form>
+                  {/* Phones: the icon becomes a close button; the field opens below the bar */}
                   <button
                     type="button"
                     onClick={closeSearch}
                     aria-label={t('header.closeSearch')}
-                    className="text-white/80 transition hover:text-white"
+                    className="text-white transition hover:text-accent sm:hidden"
                   >
                     <X className="h-5 w-5" />
                   </button>
-                </form>
+                </>
               ) : (
                 <button
                   type="button"
@@ -169,6 +185,27 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {isSearchOpen && (
+          <form
+            onSubmit={onSearchSubmit}
+            role="search"
+            className="animate-fade-in border-t border-white/10 bg-neutral-950/95 px-4 py-3 backdrop-blur-md sm:hidden"
+          >
+            <label className="relative block">
+              <Search className="pointer-events-none absolute start-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
+              <input
+                autoFocus
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={t('header.searchPlaceholder')}
+                aria-label={t('header.searchLabel')}
+                className="h-12 w-full border border-white/20 bg-white/5 ps-10 pe-4 text-base text-white placeholder:text-white/50 focus:border-[#e8c27a] focus:outline-none"
+              />
+            </label>
+          </form>
+        )}
       </header>
 
       {isMenuOpen && (

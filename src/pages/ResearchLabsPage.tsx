@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ArrowUpRight, CalendarCheck, FlaskConical, Globe, Users } from 'lucide-react'
 import clsx from 'clsx'
+import FilterSelect from '@/components/FilterSelect'
 import PageHeader from '@/components/PageHeader'
 import { researchLabs, UNIVERSITY_WEBSITE, type ResearchLab } from '@/data/labs'
 
@@ -48,8 +49,18 @@ export default function ResearchLabsPage() {
 
       <section className="bg-stone px-4 py-16 sm:px-6 lg:py-24">
         <div className="mx-auto max-w-[1400px]">
-          {/* Faculty filter */}
-          <div className="-mx-4 mb-10 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+          {/* Faculty filter. Phones: one dropdown; larger screens: a row of buttons */}
+          <FilterSelect
+            className="mb-8 sm:hidden"
+            label={t('labs.faculty')}
+            value={faculty ?? ''}
+            onChange={(value) => setFaculty(value || null)}
+            options={[
+              { value: '', label: `${t('labs.all')} (${researchLabs.length})` },
+              ...facultyIds.map((id) => ({ value: id, label: t(`faculties.items.${id}.title`) })),
+            ]}
+          />
+          <div className="mb-10 hidden flex-wrap gap-2 sm:flex">
             <FilterChip active={faculty === null} onClick={() => setFaculty(null)}>
               {t('labs.all')} ({researchLabs.length})
             </FilterChip>
