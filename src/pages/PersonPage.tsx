@@ -1,7 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowLeft, Building2, GraduationCap, Mail, Sparkles, UserRound } from 'lucide-react'
+import {
+  ArrowLeft,
+  BookMarked,
+  Briefcase,
+  Building2,
+  ExternalLink,
+  FileText,
+  FolderKanban,
+  GraduationCap,
+  Mail,
+  Sparkles,
+  UserRound,
+} from 'lucide-react'
 import { useEvents, usePerson } from '@/api/events'
 import type { PersonDetail } from '@/api/types'
 import EventCard, { EventCardSkeleton } from '@/components/events/EventCard'
@@ -92,14 +104,18 @@ export default function PersonPage() {
 
       <section className="bg-stone px-4 py-14 sm:px-6 lg:py-20">
         <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[1fr_340px] lg:gap-14">
-          <article className="bg-[#f7f7f5] px-6 py-8 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:px-10 sm:py-10">
-            <h2 className="font-serif text-2xl font-semibold text-neutral-900">
-              {t('people.about')}
-            </h2>
-            <div className="mt-5">
-              <RichText blocks={person.bio} />
-            </div>
-          </article>
+          <div className="min-w-0 space-y-10">
+            <article className="bg-[#f7f7f5] px-6 py-8 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:px-10 sm:py-10">
+              <h2 className="font-serif text-2xl font-semibold text-neutral-900">
+                {t('people.about')}
+              </h2>
+              <div className="mt-5">
+                <RichText blocks={person.bio} />
+              </div>
+            </article>
+
+            <AcademicSections person={person} />
+          </div>
 
           <aside className="h-fit space-y-6 lg:sticky lg:top-24">
             {person.expertise.length > 0 && (
@@ -112,6 +128,32 @@ export default function PersonPage() {
                   {person.expertise.map((item) => (
                     <li key={item} className="border border-white/15 px-3 py-1.5 text-sm">
                       {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {person.researchProfiles.length > 0 && (
+              <div className="bg-[#f7f7f5] p-6 shadow-[0_16px_32px_-20px_rgba(0,0,0,0.3)]">
+                <p className="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase">
+                  {t('people.researchProfiles')}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {person.researchProfiles.map((profile) => (
+                    <li key={profile.kind}>
+                      <a
+                        href={profile.url}
+                        target={profile.url === '#' ? undefined : '_blank'}
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between gap-3 border border-neutral-200 bg-white px-4 py-3 text-sm font-medium text-neutral-800 transition hover:border-crimson hover:text-crimson"
+                      >
+                        <span className="flex items-center gap-3">
+                          <BookMarked className="h-4 w-4 text-crimson" />
+                          {t(`people.profileKinds.${profile.kind}`)}
+                        </span>
+                        <ExternalLink className="h-4 w-4 opacity-40 transition group-hover:opacity-100" />
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -203,5 +245,153 @@ function ProfilePhoto({ person }: { person: PersonDetail }) {
       <span className="absolute -start-2 -top-2 h-5 w-5 border-s-2 border-t-2 border-[#e8c27a]" />
       <span className="absolute -end-2 -bottom-2 h-5 w-5 border-e-2 border-b-2 border-[#e8c27a]" />
     </div>
+  )
+}
+
+/** Degrees, experience, projects and papers; empty sections are left out */
+function AcademicSections({ person }: { person: PersonDetail }) {
+  const { t } = useTranslation()
+  const period = (from: number, to: number | null) => `${from} – ${to ?? t('people.present')}`
+
+  return (
+    <>
+      {person.education.length > 0 && (
+        <ProfileSection icon={<GraduationCap className="h-5 w-5" />} title={t('people.education')}>
+          <ol className="relative space-y-6 border-s-2 border-neutral-200 ps-6">
+            {[...person.education].reverse().map((degree) => (
+              <li key={`${degree.year}-${degree.title}`} className="relative">
+                <span className="absolute -start-[33px] top-1.5 h-4 w-4 border-2 border-crimson bg-[#f7f7f5]" />
+                <p className="font-serif text-2xl font-semibold text-crimson">{degree.year}</p>
+                <p className="mt-1 font-semibold text-neutral-900">{degree.title}</p>
+                <p className="text-sm text-neutral-600">{degree.institution}</p>
+              </li>
+            ))}
+          </ol>
+        </ProfileSection>
+      )}
+
+      {person.experience.length > 0 && (
+        <ProfileSection icon={<Briefcase className="h-5 w-5" />} title={t('people.experience')}>
+          <ul className="divide-y divide-neutral-200">
+            {person.experience.map((job) => (
+              <li
+                key={`${job.from}-${job.role}`}
+                className="flex flex-col gap-1 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:gap-6"
+              >
+                <span className="w-32 shrink-0 text-sm font-semibold text-crimson">
+                  {period(job.from, job.to)}
+                </span>
+                <span>
+                  <span className="block font-semibold text-neutral-900">{job.role}</span>
+                  <span className="text-sm text-neutral-600">{job.place}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </ProfileSection>
+      )}
+
+      {person.projects.length > 0 && (
+        <ProfileSection icon={<FolderKanban className="h-5 w-5" />} title={t('people.projects')}>
+          <ul className="grid gap-4 md:grid-cols-2">
+            {person.projects.map((project) => (
+              <li key={project.title} className="border border-neutral-200 bg-white p-5">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-xs font-semibold text-neutral-500">
+                    {period(project.from, project.to)}
+                  </span>
+                  <span
+                    className={
+                      project.to === null
+                        ? 'bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-800'
+                        : 'bg-neutral-100 px-2 py-0.5 text-xs font-semibold text-neutral-600'
+                    }
+                  >
+                    {project.to === null ? t('people.ongoing') : t('people.completed')}
+                  </span>
+                </div>
+                <p className="mt-3 font-serif text-lg leading-snug font-semibold text-neutral-900">
+                  {project.title}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                  {project.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </ProfileSection>
+      )}
+
+      {person.publications.length > 0 && (
+        <ProfileSection icon={<FileText className="h-5 w-5" />} title={t('people.publications')}>
+          <ol className="space-y-3">
+            {person.publications.map((paper) => (
+              <li key={paper.title}>
+                <PaperRow paper={paper} />
+              </li>
+            ))}
+          </ol>
+        </ProfileSection>
+      )}
+    </>
+  )
+}
+
+function PaperRow({ paper }: { paper: PersonDetail['publications'][number] }) {
+  const { t } = useTranslation()
+  const content = (
+    <>
+      <span className="font-serif text-2xl font-semibold text-neutral-300 transition group-hover:text-crimson">
+        {paper.year}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block leading-snug font-semibold text-neutral-900" dir="auto">
+          {paper.title}
+        </span>
+        <span className="mt-1 block text-sm text-neutral-600" dir="auto">
+          {paper.venue}
+        </span>
+        <span className="mt-2 inline-block bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600">
+          {t(`people.paperKinds.${paper.kind}`)}
+        </span>
+      </span>
+      {paper.url && (
+        <span className="hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-crimson sm:flex">
+          {t('people.readPaper')}
+          <ExternalLink className="h-4 w-4" />
+        </span>
+      )}
+    </>
+  )
+  const className =
+    'group flex items-start gap-5 border border-neutral-200 bg-white p-5 transition hover:border-crimson'
+  return paper.url ? (
+    <a href={paper.url} target="_blank" rel="noopener noreferrer" className={className}>
+      {content}
+    </a>
+  ) : (
+    <div className={className}>{content}</div>
+  )
+}
+
+function ProfileSection({
+  icon,
+  title,
+  children,
+}: {
+  icon: ReactNode
+  title: string
+  children: ReactNode
+}) {
+  return (
+    <section className="bg-[#f7f7f5] px-6 py-8 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] sm:px-10 sm:py-10">
+      <h2 className="flex items-center gap-3 font-serif text-2xl font-semibold text-neutral-900">
+        <span className="flex h-10 w-10 items-center justify-center bg-crimson/10 text-crimson">
+          {icon}
+        </span>
+        {title}
+      </h2>
+      <div className="mt-6">{children}</div>
+    </section>
   )
 }

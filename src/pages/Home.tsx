@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import KeyFigures from '@/components/KeyFigures'
 import PlatformsSection from '@/components/PlatformsSection'
 import RectorSection from '@/components/RectorSection'
+import StudentLifeSection from '@/components/StudentLifeSection'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <RectorSection />
       <PlatformsSection />
       <FacultiesSection />
+      <StudentLifeSection />
       <EventsSection />
     </>
   )

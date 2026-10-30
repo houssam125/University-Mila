@@ -51,7 +51,8 @@
     "clubs": "Clubs & Activities",
     "housing": "Housing & Dining",
     "events": "Events",
-    "boussouf": "Abdelhafid Boussouf"
+    "boussouf": "Abdelhafid Boussouf",
+    "structure": "University structure"
   },
   "hero": {
     "titleLine1": "Abdelhafid Boussouf",
@@ -224,7 +225,29 @@
     "contact": "Contact",
     "sendEmail": "Send an email",
     "events": "Events and activities",
-    "noEvents": "No events yet."
+    "noEvents": "No events yet.",
+    "researchProfiles": "Research profiles",
+    "education": "Degrees",
+    "experience": "Experience",
+    "projects": "Projects",
+    "publications": "Publications",
+    "present": "present",
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "readPaper": "Find paper",
+    "profileKinds": {
+      "googleScholar": "Google Scholar",
+      "researchGate": "ResearchGate",
+      "orcid": "ORCID",
+      "scopus": "Scopus",
+      "website": "Personal website"
+    },
+    "paperKinds": {
+      "article": "Journal article",
+      "conference": "Conference paper",
+      "book": "Book",
+      "chapter": "Book chapter"
+    }
   },
   "boussouf": {
     "label": "Our namesake",
@@ -246,5 +269,677 @@
     "text": "This page could not be displayed. Please try reloading, or go back to the home page.",
     "reload": "Reload the page",
     "home": "Back to home"
+  },
+  "studentLife": {
+    "label": "Campus & services",
+    "title": "Student Life",
+    "intro": "Everything that makes studying in Mila more than lectures: knowledge, support, friendships and a place to live.",
+    "items": {
+      "library": {
+        "tag": "Knowledge",
+        "title": "University Library",
+        "description": "Books, theses and scientific journals, quiet reading rooms and digital resources, with an online catalogue to search the collections from anywhere.",
+        "highlights": ["Online catalogue", "Reading rooms", "Theses and digital resources"],
+        "cta": "Visit the library website"
+      },
+      "scholarships": {
+        "tag": "Funding",
+        "title": "Scholarships",
+        "description": "National study grants, support for internships abroad and exchange programmes for students and doctoral candidates.",
+        "highlights": ["National grants", "Internships abroad", "Exchange programmes"],
+        "cta": "Learn about scholarships"
+      },
+      "clubs": {
+        "tag": "Campus life",
+        "title": "University Clubs",
+        "description": "Scientific, cultural, sports and environmental clubs where students meet, organise events and grow their talents.",
+        "highlights": ["Science and technology", "Culture and arts", "Sports and environment"],
+        "cta": "Discover the clubs"
+      },
+      "housing": {
+        "tag": "Student services",
+        "title": "Housing and Dining",
+        "description": "University residences and restaurants, run with the National Office of University Services (ONOU), offer accommodation and affordable meals close to campus.",
+        "highlights": [
+          "University residences",
+          "University restaurants",
+          "How to apply for a room"
+        ],
+        "cta": "Housing and dining information"
+      }
+    }
+  },
+  "footer": {
+    "about": "Abdelhafid Boussouf University – Mila is a public university in Mila, Algeria, committed to academic excellence, research and innovation.",
+    "address": "University Pole, Mila City Road, Mila 43000, Algeria",
+    "quickLinks": "Quick links",
+    "sitePages": "Site pages",
+    "relatedLinks": "Related links",
+    "map": "Access map",
+    "mapTitle": "Map of Abdelhafid Boussouf University, Mila",
+    "openMap": "Open in Google Maps",
+    "structureTitle": "University structure",
+    "structureText": "How the university is organised, from the rectorate to the faculties.",
+    "structureCta": "View the organisation chart",
+    "rights": "Abdelhafid Boussouf University – Mila. All rights reserved.",
+    "backToTop": "Back to top",
+    "links": {
+      "distanceLearning": "Distance Learning",
+      "dspace": "DSpace Repository",
+      "timetable": "Timetable Platform",
+      "ministry": "Ministry of Higher Education",
+      "cerist": "CERIST Research Center",
+      "arn": "Algerian Research Network",
+      "home": "Home",
+      "structure": "University structure",
+      "boussouf": "Abdelhafid Boussouf",
+      "events": "Events",
+      "teachers": "Teachers",
+      "clubs": "Clubs",
+      "labs": "Research Labs",
+      "housing": "Housing & Dining",
+      "scholarships": "Scholarships"
+    }
+  },
+  "structure": {
+    "title": "University Structure",
+    "intro": "How Abdelhafid Boussouf University – Mila is organised: the rectorate and its councils, the vice-rectorates and the general secretariat, and the faculties, library and services that serve students.",
+    "levels": {
+      "leadership": "Leadership and councils",
+      "administration": "Vice-rectorates and administration",
+      "academic": "Teaching, research and services"
+    },
+    "legend": {
+      "authority": "Line of authority",
+      "councils": "Councils (decision and advice)"
+    },
+    "groups": {
+      "faculties": "Faculties and institutes",
+      "facultiesNote": "Each faculty is led by a dean, with departments headed by department heads.",
+      "services": "Common services"
+    },
+    "note": "Chart based on the standard organisation of Algerian universities (Executive Decree No. 03-279 of 23 August 2003).",
+    "nodes": {
+      "rector": {
+        "title": "Rector",
+        "description": "Leads the university, represents it and oversees all its structures."
+      },
+      "board": {
+        "title": "Board of Directors",
+        "description": "Decides on the budget, development plans and organisation of the university."
+      },
+      "scientificCouncil": {
+        "title": "Scientific Council",
+        "description": "Gives its opinion on teaching programmes, research and scientific life."
+      },
+      "vrTeaching": {
+        "title": "Vice-Rectorate for Higher Education",
+        "description": "Bachelor and master training, continuing education and diplomas."
+      },
+      "vrResearch": {
+        "title": "Vice-Rectorate for Postgraduate Studies and Research",
+        "description": "Doctorate, university habilitation and scientific research."
+      },
+      "vrRelations": {
+        "title": "Vice-Rectorate for External Relations",
+        "description": "Cooperation, partnerships, communication and scientific events."
+      },
+      "vrDevelopment": {
+        "title": "Vice-Rectorate for Development and Forecasting",
+        "description": "Development plans, statistics and student guidance."
+      },
+      "secretariat": {
+        "title": "General Secretariat",
+        "description": "Staff, budget, general services and cultural and sports activities."
+      },
+      "library": {
+        "title": "Central Library",
+        "description": "The university’s collections, reading rooms and digital resources, open to all students and researchers."
+      },
+      "computing": {
+        "title": "Computing and Networks Center"
+      },
+      "quality": {
+        "title": "Quality Assurance Cell"
+      },
+      "incubator": {
+        "title": "Business Incubator"
+      }
+    }
+  },
+  "labs": {
+    "title": "Research Laboratories",
+    "eyebrow": "Research",
+    "intro_one": "The university hosts {{count}} accredited research laboratory across its faculties.",
+    "intro_other": "The university hosts {{count}} accredited research laboratories across its faculties, each with its own teams and areas of study.",
+    "all": "All laboratories",
+    "accredited": "Accredited",
+    "since": "Accredited {{year}}",
+    "teamsLabel": "Research teams",
+    "teams_one": "{{count}} research team",
+    "teams_other": "{{count}} research teams",
+    "website": "Visit the lab website",
+    "universityPage": "See on the university website",
+    "source": "Information from the research laboratories page of",
+    "items": {
+      "eetlab": {
+        "name": "Environmental Engineering and Technologies Laboratory",
+        "topics": ["Energy", "Natural risks", "Vulnerability", "Nanomaterials"]
+      },
+      "lasl": {
+        "name": "Applied Linguistics Laboratory between Science and Literature",
+        "topics": ["Applied linguistics", "Language teaching", "Discourse"]
+      },
+      "ldac": {
+        "name": "Literary and Critical Studies Laboratory",
+        "topics": ["Literary studies", "Critical methods", "Literary genres", "Discourse analysis"]
+      },
+      "lisi": {
+        "name": "Computer Science and Artificial Intelligence Laboratory",
+        "topics": ["Artificial intelligence", "Computer science", "Intelligent systems"]
+      },
+      "lmti": {
+        "name": "Mathematics and its Interactions Laboratory",
+        "topics": [
+          "Dynamical systems",
+          "Chaos and synchronisation",
+          "Numerical analysis",
+          "Fractional calculus"
+        ]
+      },
+      "lsnm": {
+        "name": "Natural Sciences and Materials Laboratory",
+        "topics": ["Sedimentary basins", "Bioactive substances", "Biodiversity", "Epidemiology"]
+      },
+      "esdedd": {
+        "name": "Laboratory for Studies on Economic Diversification Strategies for Sustainable Development",
+        "topics": ["SMEs", "Service economy", "Industrial investment", "Food security"]
+      }
+    }
+  },
+  "scholarships": {
+    "title": "Scholarships",
+    "eyebrow": "Student life",
+    "intro": "Scholarships, training and exchange programmes announced by the university. See which ones are open now and browse past offers.",
+    "yearsCovered": "Years of offers",
+    "international": "International",
+    "searchLabel": "Search scholarships",
+    "searchPlaceholder": "Search by name, country or level…",
+    "year": "Year",
+    "month": "Month",
+    "allYears": "All years",
+    "allMonths": "All months",
+    "status": {
+      "all": "All",
+      "open": "Open",
+      "upcoming": "Upcoming",
+      "closed": "Closed"
+    },
+    "clear": "Clear filters",
+    "results_one": "{{count}} scholarship",
+    "results_other": "{{count}} scholarships",
+    "emptyTitle": "No scholarships found",
+    "emptyText": "Try another word, or clear the filters.",
+    "published": "Announced",
+    "deadline": "Deadline",
+    "allYear": "Open all year",
+    "seeAnnouncement": "See announcement",
+    "apply": "See details and apply",
+    "viewArchive": "View announcement",
+    "source": "Offers from the scholarships section of",
+    "levels": {
+      "licence": "Licence",
+      "master": "Master’s",
+      "phd": "Doctorate",
+      "training": "Training",
+      "exchange": "Exchange",
+      "staff": "Teachers & staff"
+    },
+    "items": {
+      "erasmus": {
+        "title": "Erasmus+ international exchange",
+        "summary": "Mobility with partner universities in Poland, Bulgaria, Portugal, Romania, Estonia, Spain and Latvia."
+      },
+      "mexico": {
+        "title": "Mexican Excellence Scholarship",
+        "summary": "Call for applications for the 2025–2026 academic year, sent by the Ministry."
+      },
+      "ethiopia": {
+        "title": "Civil aviation training programme",
+        "summary": "A training programme in civil aviation offered in Ethiopia."
+      },
+      "brazil": {
+        "title": "Brazilian scholarship – PEC students programme",
+        "summary": "Call for applications under the Brazilian PEC agreement for 2025."
+      },
+      "vietnam": {
+        "title": "Vietnam University of Industry and Trade",
+        "summary": "A scholarship offered by the Vietnam University of Industry and Trade."
+      },
+      "colombia": {
+        "title": "Colombia scholarships 2024 (ICETEX)",
+        "summary": "Full scholarships for master’s and doctoral studies in Colombian institutions."
+      },
+      "insubria": {
+        "title": "20 scholarships at the University of Insubria",
+        "summary": "Two years of study in Italian or English with €5,000 a year."
+      },
+      "unoosa": {
+        "title": "UN Office for Outer Space Affairs",
+        "summary": "Postgraduate study scholarship offered by the United Nations Office for Outer Space Affairs."
+      },
+      "southAfrica": {
+        "title": "Doctoral scholarships in South Africa",
+        "summary": "Doctoral study offers from a South African university, sent by the Ministry."
+      },
+      "hungary2024": {
+        "title": "Hungary scholarships 2024–2025",
+        "summary": "For licence and master’s graduates who want to study for a master’s or PhD in Hungary."
+      },
+      "china2024": {
+        "title": "Chinese Government Scholarship 2024–2025",
+        "summary": "30 full scholarships for Algerian students at master’s and doctoral level."
+      },
+      "indiaStaff": {
+        "title": "Indian Government training for researchers",
+        "summary": "Training offered by the Government of India to teacher-researchers."
+      },
+      "romania2023": {
+        "title": "Romania scholarship 2023–2024",
+        "summary": "Scholarship offer from Romania for the 2023–2024 academic year."
+      },
+      "indonesiaMaulana": {
+        "title": "Maulana Malik Ibrahim University (ISS 2023)",
+        "summary": "International Student Scholarship for all three cycles in Indonesia."
+      },
+      "hungaryFao": {
+        "title": "FAO scholarship in Hungary",
+        "summary": "Master’s in agricultural water management or biotechnology, offered by the FAO."
+      },
+      "indiaIccr": {
+        "title": "Indian scholarships (ICCR) 2023–2024",
+        "summary": "Studies in Indian universities and institutes, applications through the A2A portal."
+      },
+      "indonesiaUnsika": {
+        "title": "UNSIKA full scholarship",
+        "summary": "Eight semesters of undergraduate study at Singaperbangsa Karawang University."
+      },
+      "malaysia": {
+        "title": "Malaysian scholarship (MISI)",
+        "summary": "Scholarship for doctoral studies in Malaysia."
+      },
+      "tunisia": {
+        "title": "Algerian–Tunisian student exchange",
+        "summary": "Student exchange programme between Algeria and Tunisia for 2022–2023."
+      },
+      "serbia": {
+        "title": "Serbia scholarship (extended)",
+        "summary": "Master’s or doctoral studies in Serbian universities; deadline extended."
+      },
+      "egyptJapan": {
+        "title": "Egypt-Japan University scholarships",
+        "summary": "150 postgraduate scholarships for African students, covering fees, housing and flights."
+      },
+      "renmin": {
+        "title": "Renmin University – Silk Road School",
+        "summary": "Master’s in contemporary Chinese studies at Renmin University, China."
+      },
+      "azerbaijan": {
+        "title": "Azerbaijan scholarships",
+        "summary": "Four scholarships for master’s, doctoral and medical studies in Azerbaijan."
+      },
+      "mauritius": {
+        "title": "Mauritius scholarship programme 2022",
+        "summary": "Call for applications to the 2022 edition of the Mauritius scholarships."
+      },
+      "romania2022": {
+        "title": "Romanian annual scholarship programme",
+        "summary": "Annual programme of the Romanian Ministry of Foreign Affairs for non-EU students."
+      },
+      "turkey": {
+        "title": "Türkiye Scholarships 2022",
+        "summary": "Turkish Government programme for higher education, fully funded."
+      },
+      "japan": {
+        "title": "Kubota Fund scholarship, Japan",
+        "summary": "One year in Japan from April 2022 to March 2023, funded by the Kubota Fund."
+      }
+    }
+  },
+  "clubs": {
+    "title": "Clubs & Activities",
+    "eyebrow": "Student life",
+    "intro": "Science, technology, culture, sport and volunteering: join a club, meet people and build something together.",
+    "statClubs": "Clubs",
+    "statMembers": "Members",
+    "statFields": "Fields",
+    "sampleNotice": "Sample content: these clubs, photos and achievements are placeholders to preview the page. The real clubs will be added soon.",
+    "all": "All clubs",
+    "bestAchievement": "Best achievement",
+    "members_one": "{{count}} member",
+    "members_other": "{{count}} members",
+    "since": "Since {{year}}",
+    "fields": {
+      "science": "Science",
+      "tech": "Technology",
+      "culture": "Culture & arts",
+      "social": "Social",
+      "sports": "Sports"
+    },
+    "items": {
+      "robotics": {
+        "name": "Robotics & Electronics Club",
+        "description": "Students design, build and program robots, from line followers to small autonomous vehicles.",
+        "event": "Robot build workshop · March 2025",
+        "achievement": "First place at the national university robotics challenge.",
+        "mission": "We want every student, whatever their field, to be able to build a working robot and understand the electronics inside it.",
+        "goals": [
+          "Run a hands-on workshop every month",
+          "Represent Mila in national robotics competitions",
+          "Share open-source designs with other universities"
+        ],
+        "events": {
+          "workshop": {
+            "title": "Robot build workshop",
+            "text": "Forty students built and programmed line-following robots in one day."
+          },
+          "challenge": {
+            "title": "National university robotics challenge",
+            "text": "Our autonomous rover finished first out of 28 university teams."
+          },
+          "openDay": {
+            "title": "Robotics open day",
+            "text": "Demonstrations for high-school pupils visiting the campus."
+          }
+        }
+      },
+      "developers": {
+        "name": "Developers Club",
+        "description": "A community of students who learn web, mobile and AI development together through projects and talks.",
+        "event": "24-hour campus hackathon · February 2025",
+        "achievement": "Organised the first hackathon in Mila, with 120 participants.",
+        "mission": "We help students turn code into real products, learning together through projects, talks and hackathons.",
+        "goals": [
+          "Teach modern web, mobile and AI tools",
+          "Build apps that solve problems on campus",
+          "Connect students with internships and companies"
+        ],
+        "events": {
+          "hackathon": {
+            "title": "24-hour campus hackathon",
+            "text": "120 students in 30 teams built apps for the university in one night."
+          },
+          "bootcamp": {
+            "title": "Web development bootcamp",
+            "text": "Six weeks of evening sessions on React and APIs."
+          },
+          "talk": {
+            "title": "Careers in tech talk",
+            "text": "Alumni working in software shared how they found their first job."
+          }
+        }
+      },
+      "astronomy": {
+        "name": "Astronomy Club",
+        "description": "Night-sky observations, astrophotography and talks that bring space science closer to students.",
+        "event": "Night of the stars observation · August 2024",
+        "achievement": "Photo of the Milky Way selected for a national astronomy exhibition.",
+        "mission": "We bring the sky closer to students through observation nights, astrophotography and science talks.",
+        "goals": [
+          "Hold an observation night every season",
+          "Train members in astrophotography",
+          "Bring astronomy to schools across Mila"
+        ],
+        "events": {
+          "starNight": {
+            "title": "Night of the stars",
+            "text": "Telescopes set up on campus to watch the Perseid meteor shower."
+          },
+          "eclipse": {
+            "title": "Eclipse livestream",
+            "text": "A public session to follow the solar eclipse with safe viewers."
+          },
+          "observatory": {
+            "title": "Observatory visit",
+            "text": "A trip to a national observatory to meet professional astronomers."
+          }
+        }
+      },
+      "theatre": {
+        "name": "Theatre & Arts Club",
+        "description": "Drama, music and visual arts, with a performance on stage every semester.",
+        "event": "End-of-year play · June 2024",
+        "achievement": "Best performance award at the inter-university theatre festival.",
+        "mission": "We give students a stage to act, sing and create, and bring culture to campus life.",
+        "goals": [
+          "Put on a play every semester",
+          "Take part in national university festivals",
+          "Open workshops in acting and music to all students"
+        ],
+        "events": {
+          "play": {
+            "title": "End-of-year play",
+            "text": "An original comedy written and performed by members, in front of 400 people."
+          },
+          "festival": {
+            "title": "Inter-university theatre festival",
+            "text": "Our play won the best performance award."
+          },
+          "dance": {
+            "title": "Heritage evening",
+            "text": "Traditional music and dance from the regions of Algeria."
+          }
+        }
+      },
+      "debate": {
+        "name": "Debate & Public Speaking Club",
+        "description": "Students practise arguing, presenting and speaking with confidence in Arabic, French and English.",
+        "event": "Open debate night · April 2025",
+        "achievement": "Finalists of the national university debate tournament.",
+        "mission": "We train students to think clearly, argue with respect and speak with confidence in public.",
+        "goals": [
+          "Hold a debate night every month",
+          "Compete in national debate tournaments",
+          "Coach students for presentations and interviews"
+        ],
+        "events": {
+          "debateNight": {
+            "title": "Open debate night",
+            "text": "Students argued for and against AI in education before a live audience."
+          },
+          "tournament": {
+            "title": "National debate tournament",
+            "text": "Our team reached the final after five rounds."
+          },
+          "training": {
+            "title": "Public speaking training",
+            "text": "A three-day course on voice, body language and slides."
+          }
+        }
+      },
+      "volunteering": {
+        "name": "Volunteering Club",
+        "description": "Charity campaigns, blood drives and help for students and families in need across Mila.",
+        "event": "Ramadan food basket campaign · March 2024",
+        "achievement": "More than 600 food baskets delivered to families in Mila.",
+        "mission": "We bring students together to help people in need, protect the environment and serve Mila.",
+        "goals": [
+          "Organise a solidarity campaign every semester",
+          "Hold two blood drives a year",
+          "Keep the campus and its surroundings clean"
+        ],
+        "events": {
+          "ramadan": {
+            "title": "Ramadan food basket campaign",
+            "text": "More than 600 baskets prepared and delivered to families."
+          },
+          "cleanup": {
+            "title": "Beni Haroun shore clean-up",
+            "text": "80 volunteers collected waste along the lake shore."
+          },
+          "blood": {
+            "title": "Blood donation drive",
+            "text": "Organised with the Mila blood transfusion centre."
+          }
+        }
+      },
+      "football": {
+        "name": "University Football Team",
+        "description": "The university team trains twice a week and plays in the regional university league.",
+        "event": "Regional university league final · May 2023",
+        "achievement": "Champions of the eastern region university league.",
+        "mission": "We represent the university on the pitch and keep students active through sport.",
+        "goals": [
+          "Train twice a week all year",
+          "Win the regional university league",
+          "Organise an inter-faculty tournament every spring"
+        ],
+        "events": {
+          "final": {
+            "title": "Regional university league final",
+            "text": "A 2–1 win made us champions of the eastern region."
+          },
+          "tournament": {
+            "title": "Inter-faculty tournament",
+            "text": "Seven faculty teams played over two weekends."
+          },
+          "friendly": {
+            "title": "Friendly match with Constantine",
+            "text": "A friendly against the University of Constantine team."
+          }
+        }
+      }
+    },
+    "viewProfile": "View club profile",
+    "backToClubs": "All clubs",
+    "mission": "Our mission",
+    "goals": "Our goals",
+    "gallery": "Photo gallery",
+    "events": "Events",
+    "founded": "Founded",
+    "membersLabel": "Members",
+    "eventsLabel": "Events",
+    "followUs": "Follow the club",
+    "otherClubs": "Other clubs",
+    "notFound": "This club does not exist."
+  },
+  "housing": {
+    "title": "Housing & Dining",
+    "eyebrow": "Student life",
+    "intro": "Where students live and eat: the university residences for women and men, and the university restaurant.",
+    "samplePartial": "Name, capacity and Facebook page are real. The description, photos and events are sample content until the real details are added.",
+    "sampleFull": "Sample content: the name, details, photos and events are placeholders until the real details are added.",
+    "kinds": {
+      "residence": "Residence",
+      "restaurant": "Restaurant"
+    },
+    "gender": {
+      "women": "Women",
+      "men": "Men"
+    },
+    "beds": "{{count}} beds",
+    "mealsPerDay": "{{count}} meals a day",
+    "capacity": "Capacity",
+    "residents": "Residents",
+    "eventsLabel": "Events",
+    "mealPrice": "Meal price",
+    "dzd": "DA",
+    "viewProfile": "View details",
+    "back": "Housing & Dining",
+    "about": "About",
+    "services": "Services",
+    "hours": "Meal times",
+    "gallery": "Photo gallery",
+    "events": "Events",
+    "followUs": "Follow",
+    "others": "Also on campus",
+    "serviceNames": {
+      "wifi": "Wi-Fi",
+      "readingRoom": "Reading room",
+      "sports": "Sports facilities",
+      "prayer": "Prayer room",
+      "medical": "Medical unit",
+      "laundry": "Laundry",
+      "transport": "Bus to campus",
+      "dining": "Dining hall",
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "ramadan": "Ramadan iftar"
+    },
+    "items": {
+      "women2000": {
+        "name": "2000-Bed Women's University Residence",
+        "summary": "The university residence for female students in Mila, with 2,000 beds.",
+        "description": "A residence for female students close to the campus, with furnished rooms, a reading room, sports facilities and a dining hall. A team of supervisors, a medical unit and buses to the university make daily life easier.",
+        "events": {
+          "welcome": {
+            "title": "Welcome day for new students",
+            "text": "A day to help first-year students settle in, with a tour of the residence and its services."
+          },
+          "reading": {
+            "title": "Reading week",
+            "text": "Book exchange and reading contests in the residence reading room."
+          },
+          "womensDay": {
+            "title": "International Women's Day",
+            "text": "Exhibition of students’ crafts, drawings and traditional dishes."
+          }
+        }
+      },
+      "men": {
+        "name": "Men's University Residence",
+        "summary": "The university residence for male students, a short bus ride from the campus.",
+        "description": "A residence for male students with shared rooms, a reading room, a football pitch and a prayer room. The dining hall serves three meals a day and buses run to the university every morning.",
+        "events": {
+          "football": {
+            "title": "Residence football tournament",
+            "text": "Sixteen teams of residents played for the residence cup."
+          },
+          "quran": {
+            "title": "Ramadan Quran contest",
+            "text": "A recitation contest held in the residence prayer room."
+          },
+          "welcome": {
+            "title": "Welcome evening",
+            "text": "New residents met the supervisors and learned the residence rules."
+          }
+        }
+      },
+      "restaurant": {
+        "name": "Central University Restaurant",
+        "summary": "Three meals a day for students, at the national student price.",
+        "description": "The central restaurant serves breakfast, lunch and dinner to students with a valid student card. Menus change every week, and a special iftar menu is served during Ramadan.",
+        "events": {
+          "iftar": {
+            "title": "Ramadan iftar for students",
+            "text": "Iftar meals served every evening to students who stay on campus."
+          },
+          "tasting": {
+            "title": "New menu tasting day",
+            "text": "Students tasted and voted for new dishes for the weekly menu."
+          },
+          "renovation": {
+            "title": "Dining hall reopening",
+            "text": "The renovated dining hall reopened with new tables and serving lines."
+          }
+        }
+      }
+    }
+  },
+  "teachers": {
+    "title": "University Teachers",
+    "eyebrow": "Teaching staff",
+    "intro": "Meet the teachers and researchers of each faculty: their degrees, experience, research papers and projects.",
+    "sampleNotice": "Sample content: apart from the rector's degrees, these teacher profiles are placeholders until the real profiles are added.",
+    "searchLabel": "Search teachers",
+    "searchPlaceholder": "Search by name, subject or expertise…",
+    "allFaculties": "All faculties",
+    "results_one": "{{count}} teacher",
+    "results_other": "{{count}} teachers",
+    "clear": "Clear filters",
+    "emptyTitle": "No teachers found",
+    "emptyText": "Try another name, or choose another faculty.",
+    "viewProfile": "View profile"
   }
 }

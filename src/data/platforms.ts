@@ -14,6 +14,11 @@ export interface Platform {
 
 export const platforms: Platform[] = [
   { id: 'documents', icon: FileCheck2, art: 'documents', href: '#' },
-  { id: 'elearning', icon: MonitorPlay, art: 'learning', href: '#' },
-  { id: 'timetables', icon: CalendarDays, art: 'schedule', href: '#' },
+  { id: 'elearning', icon: MonitorPlay, art: 'learning', href: 'https://elearning.univ-mila.dz/' },
+  {
+    id: 'timetables',
+    icon: CalendarDays,
+    art: 'schedule',
+    href: 'https://edt.univ-mila.dz/starter/ar/index.php',
+  },
 ]

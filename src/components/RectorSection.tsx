@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, Quote } from 'lucide-react'
 import clsx from 'clsx'
@@ -57,13 +56,15 @@ export default function RectorSection() {
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-600">
             {t('rector.summary')}
           </p>
-          <Link
-            to={rector.addressLink}
+          <a
+            href={rector.addressLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group/link mt-5 inline-flex w-fit items-center gap-3 bg-neutral-900 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-neutral-700"
           >
             {t('rector.readAddress')}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1 rtl:-scale-x-100 rtl:group-hover/link:-translate-x-1" />
-          </Link>
+          </a>
         </div>
 
         {/* Academic path */}

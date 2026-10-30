@@ -1,4 +1,5 @@
 import { Outlet, ScrollRestoration } from 'react-router-dom'
+import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
 export default function MainLayout() {
@@ -8,6 +9,7 @@ export default function MainLayout() {
       <main>
         <Outlet />
       </main>
+      <Footer />
       {/* New pages open at the top; going back returns to where you were */}
       <ScrollRestoration />
     </div>

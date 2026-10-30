@@ -21,6 +21,8 @@ import type {
   Inline,
   Paginated,
   PersonDetail,
+  PersonListItem,
+  PersonListParams,
   PersonSummary,
 } from '@/api/types'
 import { events } from './data/events'
@@ -32,7 +34,10 @@ import type {
   MockInline,
   MockPerson,
 } from './data/helpers'
-import { people } from './data/people'
+import { people as basePeople } from './data/people'
+import { academicRecords, emptyAcademic, extraTeachers } from './data/teachers'
+
+const people = [...basePeople, ...extraTeachers]
 
 const SITE_URL = import.meta.env.VITE_SITE_URL ?? ''
 const locales = { en, fr, ar }
@@ -128,7 +133,11 @@ const toPersonSummary = (person: MockPerson, lang: LanguageCode): PersonSummary 
   type: person.type,
   position: person.position[lang],
   department: person.department
-    ? { slug: person.department.slug, name: person.department.name[lang] }
+    ? {
+        slug: person.department.slug,
+        // Faculties use the same names as the faculties section
+        name: facultyName(person.department.slug, lang) ?? person.department.name[lang],
+      }
     : null,
   photo: person.photo ? toImage(person.photo, lang) : null,
   profileUrl: `${SITE_URL}/people/${person.slug}`,
@@ -360,16 +369,69 @@ export async function listEventCategories(lang: LanguageCode): Promise<EventCate
   return [...counts].map(([key, count]) => ({ ...toCategory(key, lang), count }))
 }
 
+/** GET /people */
+export async function listPeople(
+  lang: LanguageCode,
+  params: PersonListParams = {},
+): Promise<Paginated<PersonListItem>> {
+  await delay()
+  const { page = 1, pageSize = 24, type, faculty, q } = params
+  const needle = q?.trim().toLocaleLowerCase(lang)
+  const matches = people
+    .filter((person) => !type || person.type === type)
+    .filter((person) => !faculty || person.department?.slug === faculty)
+    .map((person) => ({ ...toPersonSummary(person, lang), expertise: person.expertise[lang] }))
+    .filter(
+      (person) =>
+        !needle ||
+        [person.fullName, person.position, person.department?.name ?? '', ...person.expertise]
+          .join(' ')
+          .toLocaleLowerCase(lang)
+          .includes(needle),
+    )
+    .sort((a, b) => a.fullName.localeCompare(b.fullName, lang))
+  const start = (page - 1) * pageSize
+  return {
+    data: matches.slice(start, start + pageSize),
+    meta: {
+      page,
+      pageSize,
+      total: matches.length,
+      totalPages: Math.max(1, Math.ceil(matches.length / pageSize)),
+    },
+  }
+}
+
 /** GET /people/{slug} */
 export async function getPerson(lang: LanguageCode, slug: string): Promise<PersonDetail> {
   await delay()
   const person = findPerson(slug)
   if (!person) throw new ApiError(404, 'NOT_FOUND', 'Person not found.')
+  const academic = academicRecords[slug] ?? emptyAcademic
   return {
     ...toPersonSummary(person, lang),
     email: person.email,
     expertise: person.expertise[lang],
     bio: person.bio[lang].map(toBlock),
+    education: academic.education.map((item) => ({
+      year: item.year,
+      title: item.title[lang],
+      institution: item.institution[lang],
+    })),
+    experience: academic.experience.map((item) => ({
+      from: item.from,
+      to: item.to,
+      role: item.role[lang],
+      place: item.place[lang],
+    })),
+    publications: [...academic.publications].sort((a, b) => b.year - a.year),
+    projects: academic.projects.map((item) => ({
+      title: item.title[lang],
+      description: item.description[lang],
+      from: item.from,
+      to: item.to,
+    })),
+    researchProfiles: academic.researchProfiles,
   }
 }
 

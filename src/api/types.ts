@@ -39,11 +39,71 @@ export interface PersonSummary {
   profileUrl: string
 }
 
-/** GET /people/{slug} */
-export interface PersonDetail extends PersonSummary {
-  email: string | null
+/** GET /people: a row of the teachers directory */
+export interface PersonListItem extends PersonSummary {
   expertise: string[]
+}
+
+export interface PersonListParams {
+  page?: number
+  pageSize?: number
+  type?: 'teacher' | 'staff'
+  /** Faculty slug, e.g. math-cs */
+  faculty?: string
+  q?: string
+}
+
+/** A degree the person holds, oldest first */
+export interface PersonDegree {
+  year: number
+  title: string
+  institution: string
+}
+
+export interface PersonExperience {
+  from: number
+  /** null while the position is current */
+  to: number | null
+  role: string
+  place: string
+}
+
+export type PublicationKind = 'article' | 'conference' | 'book' | 'chapter'
+
+export interface PersonPublication {
+  /** Kept in the language it was published in */
+  title: string
+  /** Journal, conference or publisher */
+  venue: string
+  year: number
+  kind: PublicationKind
+  url: string | null
+}
+
+export interface PersonProject {
+  title: string
+  description: string
+  from: number
+  to: number | null
+}
+
+export type ResearchProfileKind = 'googleScholar' | 'researchGate' | 'orcid' | 'scopus' | 'website'
+
+export interface ResearchProfile {
+  kind: ResearchProfileKind
+  url: string
+}
+
+/** GET /people/{slug} */
+export interface PersonDetail extends PersonListItem {
+  email: string | null
   bio: Block[]
+  education: PersonDegree[]
+  experience: PersonExperience[]
+  /** Newest first */
+  publications: PersonPublication[]
+  projects: PersonProject[]
+  researchProfiles: ResearchProfile[]
 }
 
 export type EventRole = 'organizer' | 'speaker' | 'moderator' | 'coordinator' | 'guest'

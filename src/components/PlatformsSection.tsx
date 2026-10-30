@@ -51,6 +51,9 @@ function PlatformCard({ platform }: { platform: Platform }) {
   return (
     <a
       href={platform.href}
+      // Platforms are other websites: open them in a new tab once their address is set
+      target={platform.href.startsWith('http') ? '_blank' : undefined}
+      rel="noopener noreferrer"
       className="group relative flex h-full flex-col bg-[#f7f7f5] shadow-[0_24px_48px_-24px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_32px_56px_-24px_rgba(0,0,0,0.4)]"
     >
       <span className="absolute inset-x-0 top-0 z-10 h-1 origin-left scale-x-0 bg-crimson rtl:origin-right transition-transform duration-500 ease-out group-hover:scale-x-100" />

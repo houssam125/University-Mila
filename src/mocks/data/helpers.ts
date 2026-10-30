@@ -1,5 +1,12 @@
 import type { LanguageCode } from '@/i18n'
-import type { EventCategoryKey, EventLinkKind, EventOrganizer, EventRole } from '@/api/types'
+import type {
+  EventCategoryKey,
+  EventLinkKind,
+  EventOrganizer,
+  EventRole,
+  PersonPublication,
+  ResearchProfile,
+} from '@/api/types'
 
 // Records here use the admin shape from docs/api/events.md (all languages at once);
 // src/mocks/eventsApi.ts turns them into public responses for one language.
@@ -41,6 +48,25 @@ export interface MockPerson {
   email: string | null
   expertise: Localized<string[]>
   bio: Localized<MockBlock[]>
+}
+
+/** Teacher profile sections; publication titles stay in their original language */
+export interface MockAcademic {
+  education: { year: number; title: Localized<string>; institution: Localized<string> }[]
+  experience: {
+    from: number
+    to: number | null
+    role: Localized<string>
+    place: Localized<string>
+  }[]
+  publications: PersonPublication[]
+  projects: {
+    title: Localized<string>
+    description: Localized<string>
+    from: number
+    to: number | null
+  }[]
+  researchProfiles: ResearchProfile[]
 }
 
 export interface MockEvent {

@@ -526,6 +526,13 @@ Opened when a visitor clicks a teacher or staff member, in the event text or in 
 | `email` | string or `null` | public contact address; `null` hides the contact box |
 | `expertise` | string[] | areas of expertise, translated |
 | `bio` | Block[] | short biography, same [rich text](#3-rich-text-content) format as events, links included |
+| `education` | `{ year, title, institution }[]` | degrees, oldest first; `title` and `institution` translated |
+| `experience` | `{ from, to, role, place }[]` | positions held; `to` is `null` for a current position |
+| `publications` | `{ title, venue, year, kind, url }[]` | newest first. `title` and `venue` stay in the language of the paper; `kind` is `article`, `conference`, `book` or `chapter`; `url` (DOI or publisher page) may be `null` |
+| `projects` | `{ title, description, from, to }[]` | research or university projects; `to` is `null` while ongoing |
+| `researchProfiles` | `{ kind, url }[]` | `kind` is `googleScholar`, `researchGate`, `orcid`, `scopus` or `website` |
+
+Empty arrays hide their section on the profile page.
 
 ```json
 {
@@ -563,8 +570,27 @@ Opened when a visitor clicks a teacher or staff member, in the event text or in 
 
 The profile page lists the events the person took part in with `GET /events?person={slug}`.
 
+### 4.7 Teachers directory
+
+```
+GET /people?lang=en&type=teacher&faculty=math-cs&q=data&page=1&pageSize=48
+```
+
+Feeds the website page `/teachers`. Every parameter except `lang` is optional.
+
+| param | notes |
+|---|---|
+| `type` | `teacher` or `staff` |
+| `faculty` | faculty slug: `economics`, `foreign-languages`, `arabic`, `nature-life`, `technical`, `math-cs`, `law` (matches `department.slug`) |
+| `q` | searched in the name, position, department and expertise |
+| `page`, `pageSize` | as in the [paginated list](#paginated-list); default page size 24 |
+
+**200** [Paginated list](#paginated-list) of `PersonListItem`: a [PersonSummary](#personsummary) plus `expertise` (string[]), sorted by
+name.
+
 Admin: `POST /admin/people`, `PATCH /admin/people/{id}` and `DELETE /admin/people/{id}` follow the
-same rules as events (`Localized` texts for `position`, `honorific`, `expertise` and `bio`;
+same rules as events (`Localized` texts for `position`, `honorific`, `expertise`, `bio`, and the
+`title`, `institution`, `role`, `place` and `description` fields of the profile sections;
 `photoId` from `POST /admin/media`).
 
 ---

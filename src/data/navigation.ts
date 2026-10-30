@@ -56,6 +56,7 @@ export const navCategories: NavCategory[] = [
           { labelKey: 'nav.about', icon: BookOpen, to: '/university/about' },
           { labelKey: 'nav.history', icon: History, to: '/university/history' },
           { labelKey: 'nav.mission', icon: Target, to: '/university/mission' },
+          { labelKey: 'nav.structure', icon: Network, to: '/university/structure' },
         ],
       },
       {

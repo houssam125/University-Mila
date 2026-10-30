@@ -10,6 +10,8 @@ import type {
   EventSummary,
   Paginated,
   PersonDetail,
+  PersonListItem,
+  PersonListParams,
 } from './types'
 
 // The mock is loaded only in mock mode, so it never ships with the real build
@@ -63,6 +65,17 @@ export async function fetchEventCategories(lang: LanguageCode): Promise<EventCat
     params: { lang },
   })
   return data.data
+}
+
+export async function fetchPeople(
+  lang: LanguageCode,
+  params: PersonListParams = {},
+): Promise<Paginated<PersonListItem>> {
+  if (USE_MOCK_API) return (await mock()).listPeople(lang, params)
+  const { data } = await api.get<Paginated<PersonListItem>>('/people', {
+    params: { lang, ...params },
+  })
+  return data
 }
 
 export async function fetchPerson(lang: LanguageCode, slug: string): Promise<PersonDetail> {
@@ -130,6 +143,15 @@ export function useEventCategories() {
   return useQuery({
     queryKey: ['events', 'categories', lang],
     queryFn: () => fetchEventCategories(lang),
+  })
+}
+
+export function usePeople(params: PersonListParams) {
+  const lang = useLanguage()
+  return useQuery({
+    queryKey: ['people', 'list', lang, params],
+    queryFn: () => fetchPeople(lang, params),
+    placeholderData: keepPreviousData,
   })
 }
 

@@ -1,7 +1,17 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, Check, ChevronDown, ChevronRight, Globe, Menu, Search, X } from 'lucide-react'
+import {
+  ArrowRight,
+  Check,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Globe,
+  Menu,
+  Search,
+  X,
+} from 'lucide-react'
 import clsx from 'clsx'
 import { languages, type LanguageCode } from '@/i18n'
 import {
@@ -84,6 +94,8 @@ export default function Navbar() {
 
   const category = activeCategory === null ? null : navCategories[activeCategory]
   const item = category && activeItem !== null ? category.items[activeItem] : null
+  // On phones the three columns become one panel at a time, with a back button
+  const mobileLevel = item?.children ? 3 : category ? 2 : 1
 
   return (
     <>
@@ -188,7 +200,12 @@ export default function Navbar() {
 
             <div className="relative grid flex-1 md:grid-cols-3">
               {/* Column 1: main categories and direct links */}
-              <nav className="border-white/10 px-4 py-8 sm:px-10 md:border-e">
+              <nav
+                className={clsx(
+                  'border-white/10 px-4 py-8 sm:px-10 md:border-e',
+                  mobileLevel !== 1 && 'max-md:hidden',
+                )}
+              >
                 <ColumnLabel>{t('menu.navigate')}</ColumnLabel>
                 <ul className="space-y-0.5">
                   {navCategories.map((navCategory, index) => {
@@ -269,9 +286,21 @@ export default function Navbar() {
               )}
 
               {/* Column 2: items of the selected category */}
-              <section className="border-white/10 px-4 py-8 sm:px-10 md:border-e">
+              <section
+                className={clsx(
+                  'border-white/10 px-4 py-8 sm:px-10 md:border-e',
+                  mobileLevel === 2 ? 'max-md:animate-fade-in' : 'max-md:hidden',
+                )}
+              >
                 {category ? (
                   <>
+                    <MobileBack
+                      label={t('menu.navigate')}
+                      onClick={() => {
+                        setActiveCategory(null)
+                        setActiveItem(null)
+                      }}
+                    />
                     <ColumnLabel>{t(category.sectionLabelKey)}</ColumnLabel>
                     <ul className="space-y-0.5">
                       {category.items.map((navItem, index) => {
@@ -318,9 +347,15 @@ export default function Navbar() {
               </section>
 
               {/* Column 3: links of the selected sub-category */}
-              <section className="px-4 py-8 sm:px-10">
-                {item?.children ? (
+              <section
+                className={clsx(
+                  'px-4 py-8 sm:px-10',
+                  mobileLevel === 3 ? 'max-md:animate-fade-in' : 'max-md:hidden',
+                )}
+              >
+                {item?.children && category ? (
                   <>
+                    <MobileBack label={t(category.labelKey)} onClick={() => setActiveItem(null)} />
                     <ColumnLabel>{t(item.labelKey)}</ColumnLabel>
                     <ul className="space-y-0.5">
                       {item.children.map((child) => (
@@ -341,6 +376,20 @@ export default function Navbar() {
         </div>
       )}
     </>
+  )
+}
+
+/** Phones only: goes back to the previous menu panel */
+function MobileBack({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="mb-6 flex items-center gap-2 text-sm font-semibold text-[#e8c27a] md:hidden"
+    >
+      <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
+      {label}
+    </button>
   )
 }
 
